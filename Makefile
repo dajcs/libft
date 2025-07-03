@@ -6,7 +6,7 @@
 #    By: anemet <anemet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/06 11:43:39 by anemet            #+#    #+#              #
-#    Updated: 2025/07/03 13:38:49 by anemet           ###   ########.fr        #
+#    Updated: 2025/07/03 14:49:07 by anemet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ SRC		:= ft_atoi.c  ft_isascii.c ft_memcpy.c  ft_strlcat.c ft_strrchr.c \
            ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
            ft_lstmap.c \
            ft_parse_dispatch.c  ft_print_cs.c  ft_print_diu.c  ft_printf.c \
-           ft_print_px.c  ft_print_utils.c  ft_utoa.c
+           ft_print_px.c  ft_print_utils.c  ft_utoa.c \
+           get_next_line.c get_next_line_utils.c
 
 
 # Object files

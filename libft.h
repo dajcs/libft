@@ -6,7 +6,7 @@
 /*   By: anemet <anemet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 11:22:10 by anemet            #+#    #+#             */
-/*   Updated: 2025/07/03 11:43:24 by anemet           ###   ########.fr       */
+/*   Updated: 2025/07/03 14:52:25 by anemet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 // from ft_printf.h
 # include <stdarg.h>
 # include <stdint.h>
+
+// from get_next_line
+# include <limits.h>
+# define BUFFER_SIZE 2048
+# define OPEN_MAX 1024
 
 typedef struct s_list
 {
@@ -109,6 +114,14 @@ char	*ft_utoa(unsigned int n);
 void	ft_strrev(char *s, int len);
 int		ft_ptr_len(uintptr_t num);
 void	ft_put_ptr(uintptr_t num);
+
+/* ******************* Added from get_next_line ************************* */
+
+char	*get_next_line(int fd);
+size_t	gnl_strlen(char *s);
+char	*gnl_strchr(char *s, int c);
+char	*gnl_strjoin(char *s1, char *s2);
+char	*gnl_substr(char *s, unsigned int start, size_t len);
 
 #endif
 
