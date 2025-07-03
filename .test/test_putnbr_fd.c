@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 // ./a.out --> display on STDOUT and STDERR and write file /tmp/fd.txt
