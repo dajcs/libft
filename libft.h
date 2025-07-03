@@ -82,46 +82,47 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 
 typedef struct s_flags
 {
-	int	minus;
-	int	zero;
-	int	width;
-	int	dot;
-	int	precision;
-	int	hash;
-	int	space;
-	int	plus;
-}		t_flags;
+	int				minus;
+	int				zero;
+	int				width;
+	int				dot;
+	int				precision;
+	int				hash;
+	int				space;
+	int				plus;
+}					t_flags;
 
-int		ft_printf(const char *format, ...);
+int					ft_printf(const char *format, ...);
 
 // parsing and dispatching
-int		ft_eval_format(va_list args, const char *format, int *i);
-t_flags	ft_init_flags(void);
-void	ft_parse_flags_width_prec(t_flags *flags, const char *format, int *i);
-int		ft_dispatch(char type, t_flags flags, va_list args);
+int					ft_eval_format(va_list args, const char *format, int *i);
+t_flags				ft_init_flags(void);
+void				ft_parse_flags_width_prec(t_flags *flags,
+						const char *format, int *i);
+int					ft_dispatch(char type, t_flags flags, va_list args);
 
 // print functions for each conversion specifier
-int		ft_print_char(char c, t_flags flags);
-int		ft_print_str(char *str, t_flags flags);
-int		ft_print_ptr(uintptr_t ptr, t_flags flags);
-int		ft_print_nbr(int n, t_flags flags);
-int		ft_print_unsigned(unsigned int n, t_flags flags);
-int		ft_print_hex(unsigned int n, t_flags flags, char format);
+int					ft_print_char(char c, t_flags flags);
+int					ft_print_str(char *str, t_flags flags);
+int					ft_print_ptr(uintptr_t ptr, t_flags flags);
+int					ft_print_nbr(int n, t_flags flags);
+int					ft_print_unsigned(unsigned int n, t_flags flags);
+int					ft_print_hex(unsigned int n, t_flags flags, char format);
 
 // utility functions
-int		ft_print_padding(char c, int len);
-char	*ft_utoa(unsigned int n);
-void	ft_strrev(char *s, int len);
-int		ft_ptr_len(uintptr_t num);
-void	ft_put_ptr(uintptr_t num);
+int					ft_print_padding(char c, int len);
+char				*ft_utoa(unsigned int n);
+void				ft_strrev(char *s, int len);
+int					ft_ptr_len(uintptr_t num);
+void				ft_put_ptr(uintptr_t num);
 
 /* ******************* Added from get_next_line ************************* */
 
-char	*get_next_line(int fd);
-size_t	gnl_strlen(char *s);
-char	*gnl_strchr(char *s, int c);
-char	*gnl_strjoin(char *s1, char *s2);
-char	*gnl_substr(char *s, unsigned int start, size_t len);
+char				*get_next_line(int fd);
+size_t				gnl_strlen(char *s);
+char				*gnl_strchr(char *s, int c);
+char				*gnl_strjoin(char *s1, char *s2);
+char				*gnl_substr(char *s, unsigned int start, size_t len);
 
 #endif
 
